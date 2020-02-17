@@ -1,0 +1,41 @@
+@import './styles/variables';
+
+.app {
+  height: 100%;
+}
+
+.pug-container {
+  height: 100%;
+  background-color: $app-background-color;
+  padding-top: $toolbar-height;
+  box-sizing: border-box;
+
+  &--filter-open {
+    padding-top: $toolbar-height + $filter-height;
+  }
+}
+
+.pug-wrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: $app-background-color;
+  overflow-y: auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(3, $col-width);
+  grid-template-rows: max-content;
+}
+
+@media (max-width: 1000px) {
+  .pug-wrapper {
+    grid-template-columns: repeat(2, $col-width);
+  }
+}
+
+@media (max-width: 700px) {
+  .pug-wrapper {
+    grid-template-columns: $col-width;
+  }
+}

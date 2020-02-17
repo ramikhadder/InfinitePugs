@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+.toolbar {
+  height: $toolbar-height;
+  background-color: $primary-color;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);;
+  z-index: 3;
+  padding: 0 1rem;
+}
+
+.toolbar-header {
+  font-size: 1.5em;
+  color: white;
+}
+
+.toolbar-action-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.125em;
+  cursor: pointer;
+
+  img {
+    max-height: 1.25rem;
+  }
+}

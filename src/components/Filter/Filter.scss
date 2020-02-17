@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+
+.filter {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  left: 0;
+  right: 0;
+  top: $toolbar-height;
+  background-color: #F5F5F5;
+  border-bottom: solid 1px #BDBDBD;
+  z-index: 2;
+}
+
+.filter-chip {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 32px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: $accent-color;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.25rem;
+  font-weight: 500;
+  min-width: 4rem;
+
+  &:hover {
+    background-color: $accent-color-hover;
+  }
+
+  img {
+    max-height: 1.125rem;
+    margin-right: 2px;
+  }
+}
