@@ -63,7 +63,7 @@ export default class App extends Component {
         <div className={`pug-container ${this.state.showFilter ? 'pug-container--filter-open' : ''}`}>
           <div className="pug-wrapper" ref={this.pugWrapperRef}>
             {this.state.dogs.filter(this.filterDog).map((dog, index) =>
-              <PugCard key={index} src={dog.src}/>
+              <PugCard key={index} src={dog.src} number={index + 1}/>
             )}
           </div>
         </div>

@@ -26,7 +26,7 @@ export default class PugCard extends Component {
     render() {
         return (
             <div className={`card ${this.state.loading ? 'hidden' : 'card-transition' }`}>
-                <img alt="pup" ref={this.image} src={this.props.src} onLoad={this.onImageLoaded}/>
+                <img alt={`Pug ${this.props.number}`} ref={this.image} src={this.props.src} onLoad={this.onImageLoaded}/>
             </div>
         )
     }
