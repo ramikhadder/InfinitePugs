@@ -36,7 +36,7 @@ export default class App extends Component {
       return;
     }
     this.setState({ isLoading: true }, async () => {
-      const moreDogs = await this.dogsService.getMoreDogs();
+      const moreDogs = await (this.state.activeFilter === 'puggle' ? this.dogsService.getMorePuggles() : this.dogsService.getMoreDogs());
       this.setState(state => ({
         isLoading: false,
         dogs: [...state.dogs, ...moreDogs]
