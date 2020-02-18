@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Toolbar.scss'
-import filterIcon from '../../icons/filter.svg';
+import filterIcon from '../../res/icons/filter.svg';
 
 export default class Toolbar extends Component {
   render() {

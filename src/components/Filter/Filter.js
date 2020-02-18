@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Filter.scss';
-import check from '../../icons/checkmark.svg'
+import check from '../../res/icons/checkmark.svg'
 
 export default class Filter extends Component {
   render() {
