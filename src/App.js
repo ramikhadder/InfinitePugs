@@ -21,6 +21,7 @@ export default class App extends Component {
       if (this.state.isLoading) {
         return
       }
+      // if user reaches bottom of the page, load more dogs
       if (window.innerHeight + document.documentElement.scrollTop >= this.pugWrapperRef.current.offsetHeight) {
         this.loadMoreDogs()
       }
@@ -48,6 +49,7 @@ export default class App extends Component {
     this.setState(state => ({ activeFilter: state.activeFilter !== type ? type : null }));
   };
 
+  // if there is no active filter then return all dogs, else only return dogs whose breed is equal to the active filter
   filterDog = (dog) => {
     if (this.state.activeFilter === null) {
       return true;

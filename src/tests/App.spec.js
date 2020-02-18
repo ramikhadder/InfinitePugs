@@ -46,18 +46,22 @@ describe('App', () => {
     const pugButton = getByText('Pugs');
     const puggleButton = getByText('Puggles')
 
+    // filter by puggles
     fireEvent.click(puggleButton)
     let images = await queryAllByAltText(/pug(gle)*? ([0-9]+)/i);
-    expect(images.length).toBeLessThan(10);
+    expect(images.length).toBeLessThanOrEqual(10);
 
+    // unfilter by puggles
     fireEvent.click(puggleButton)
     images = await findAllByAltText(/pug(gle)*? ([0-9]+)/i);
     expect(images.length).toBe(10);
 
+    // filter by pugs
     fireEvent.click(pugButton)
     images = await queryAllByAltText(/pug(gle)*? ([0-9]+)/i);
-    expect(images.length).toBeLessThan(10);
+    expect(images.length).toBeLessThanOrEqual(10);
 
+    // unfilter by pugs
     fireEvent.click(pugButton)
     images = await findAllByAltText(/pug(gle)*? ([0-9]+)/i);
     expect(images.length).toBe(10);
