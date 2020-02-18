@@ -7,7 +7,7 @@ export default class Toolbar extends Component {
     return <div className="toolbar">
       <h1 className="toolbar-header">Infinite Pugs!</h1>
       <div className="toolbar-actions">
-        <button className="toolbar-action-button" onClick={this.props.onActionClick}>
+        <button className="toolbar-action-button" type="button" onClick={this.props.onActionClick}>
           <img src={filterIcon} alt="Filter Icon"/>
           <span>Filter</span>
         </button>
